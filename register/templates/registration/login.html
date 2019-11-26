@@ -1,0 +1,16 @@
+{%extends "rfm_model/base.html"%}
+
+{% block title%}
+Login Here
+{%endblock%}
+
+{%load crispy_forms_tags%}
+
+{%block content%}
+    <form method="post" class="from-group">
+        {%csrf_token%}
+        {{form|crispy}}
+        <p ><b style="color:black">Don't have an account? Create one </b><a href="/register"><b>Here</b></a></p>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+{%endblock%}

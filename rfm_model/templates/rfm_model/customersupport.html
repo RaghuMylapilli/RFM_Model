@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0" >
+  <h1 >Marketing Model for Efficient CRM</h1>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    {% if user.is_authenticated %}
+      <a class="navbar-brand" href="http://127.0.0.1:8000/logout/">Logout</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    {%else%}
+      <a class="navbar-brand" href="http://127.0.0.1:8000/login/">Login</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    {%endif%}
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+       {% if user.is_authenticated %}
+          <li class="nav-item">
+            <h4><b style="color:white">Hello {{user.username}}</b></h4>
+          </li>
+        {%else%}
+           <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/register/">Register</a>
+          </li>
+        {%endif%}
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/customersupport/"><b style="color:white">Customer Support</b></a>
+          </li>
+    </ul>
+  </div>
+</nav>
+<h1>For Any Queries ? - Feel Free to Write to Us :) </h1>
+    <h3> <p> Name : Alekhya <br>
+             Email Id : kalekhya.16.cse@anits.edu.in<br>
+             Phone No : 6302993074 <br></p>
+    </h3>
+    <h3> <p> Name : Raghu Ram <br>
+             Email Id : raghuanits16@gmail.com<br>
+             Phone No : 9030646556 <br></p>
+    </h3>
+    <h3> <p> Name : Manoj Kumar <br>
+             Email Id : gmanojkumar.16.cse@anits.edu.in<br>
+             Phone No : 8886193698 <br></p>
+    </h3>
+    <h3> <p> Name : Kalyan Kumar <br>
+             Email Id : vkalyankumar.16.cse@anits.edu.in<br>
+             Phone No : 9652754174<br> </p>
+    </h3>
+    <h3> <p> Name : Sai Sameer <br>
+             Email Id : bsaisameer.16.cse@anits.edu.in<br>
+             Phone No : 8096813198<br> </p>
+    </h3>
+
+<div  style="margin-bottom:0" align="right">
+  <h5 style="color:white">@copyrights: Anits_2019</h5>
+</div>
+
+</body>
+</html>

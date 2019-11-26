@@ -1,0 +1,14 @@
+
+
+rfmmodel.herokuapp.com
+
+heroku run bash --- normal migrate like pycharm
+
+git status
+git add --all
+git commit -m "thanks "
+git push heroku master 
+
+https://www.youtube.com/watch?v=OTmQOjsl0eg
+
+https://www.youtube.com/watch?v=MoX36izzEWY

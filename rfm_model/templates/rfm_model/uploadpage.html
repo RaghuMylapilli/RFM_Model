@@ -1,0 +1,15 @@
+{% extends "rfm_model/base.html" %}
+{% block title%} View Page {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1 align="center" > Upload the Data File </h1>
+    <br><br>
+    <div align="center">
+    <form class="form" method="post" align="center">
+    {% csrf_token%}
+        <input type="file" name="datafile" accept=".xlsx" >
+        <input class="submit" type = "submit" >
+    </form>
+    </div>
+
+{% endblock %}

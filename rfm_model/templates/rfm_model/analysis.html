@@ -1,0 +1,140 @@
+{% extends "rfm_model/base.html" %}
+{% block title%} View Page {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1 align="center" > Reports of the Customer Data</h1>
+    <table border="1">
+      <tr >
+        <th>  Customer Segments </th>
+        <th> Represents</th>
+        <th>  Action to be taken on Customer </th>
+      </tr>
+      <tr>
+        <td>Champions</td>
+        <td>Bought recently, buy often and spend the most!</td>
+        <td>Reward them. Can be early adopters for new products. Will promote your brand.</td>
+      </tr>
+      <tr>
+        <td>Loyal Customers</td>
+        <td>Spend good money with us often. Responsive to promotions.</td>
+        <td>Upsell higher value products. Ask for reviews. Engage them.</td>
+      </tr>
+      <tr>
+        <td>Potential Loyalist</td>
+        <td>Recent customers, but spent a good amount and bought more than once.</td>
+        <td>Offer membership / loyalty program, recommend other products.</td>
+      </tr>
+      <tr>
+        <td>Recent Customers</td>
+        <td>Bought most recently, but not often.</td>
+        <td> Provide on-boarding support, give them early success, start building relationship.</td>
+      </tr>
+      <tr>
+        <td>Promising</td>
+        <td>Recent shoppers, but haven’t spent much.</td>
+        <td>Create brand awareness, offer free trials</td>
+      </tr>
+      <tr>
+        <td>Customers Needing Attention	</td>
+        <td>Above average recency, frequency and monetary values. May not have bought very recently though.</td>
+        <td>Make limited time offers, Recommend based on past purchases. Reactivate them.</td>
+      </tr>
+      <tr>
+        <td>About To Sleep</td>
+        <td>Below average recency, frequency and monetary values. Will lose them if not reactivated.</td>
+        <td>Share valuable resources, recommend popular products / renewals at discount, reconnect with them.</td>
+      </tr>
+      <tr>
+        <td>At Risk</td>
+        <td>Spent big money and purchased often. But long time ago. Need to bring them back!</td>
+        <td>Send personalized emails to reconnect, offer renewals, provide helpful resources.</td>
+      </tr>
+      <tr>
+        <td>Can’t Lose Them</td>
+        <td>Made biggest purchases, and often. But haven’t returned for a long time.</td>
+        <td>Win them back via renewals or newer products, don’t lose them to competition, talk to them.</td>
+      </tr>
+      <tr>
+        <td>Hibernating</td>
+        <td>Last purchase was long back, low spenders and low number of orders.</td>
+        <td>Offer other relevant products and special discounts. Recreate brand value.</td>
+      </tr>
+      <tr>
+        <td>Lost</td>
+        <td>Lowest recency, frequency and monetary scores.</td>
+        <td>Revive interest with reach out campaign, ignore otherwise.</td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+<h5 style="color:black"><b>Customer Segments &nbsp; &nbsp; Customer ID </b></h5>
+    <table border="1">
+      <tr >
+          <th> Champions </th>
+           {% for x in champ %}
+            <td>{{x.Champions}}</td>
+          {% endfor %}
+      </tr>
+       <tr>
+          <th> Loyal Customers </th>
+            {% for x in loyal %}
+        <td>{{x.Loyal_Customers}}</td>
+            {% endfor %}
+       </tr>
+        <tr>
+           <th>  Potential Loyalist </th>
+            {% for x in potential%}
+        <td>{{x.Potential_Loyalist}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+             <th> Recent Customers </th>
+                {% for x in recent %}
+             <td>{{x.Recent_Customers}}</td>
+                 {% endfor %}
+        </tr>
+        <tr>
+            <th> Promising  </th>
+            {% for x in promise %}
+            <td>{{x.Promising}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> Customers Needing Attention </th>
+            {% for x in attention %}
+            <td>{{x.Customers_Needing_Attention}}</td>
+             {% endfor %}
+        </tr>
+        <tr>
+            <th> About to Sleep </th>
+            {% for x in sleep%}
+            <td>{{x.About_to_Sleep}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> At Risk </th>
+             {% for x in risk %}
+            <td>{{x.At_Risk}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+             <th> Can't Lose </th>
+             {% for x in cantlose%}
+            <td>{{x.Cant_Lose_Them}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> Hibernating </th>
+            {% for x in hibernate %}
+            <td>{{x.Hibernating}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+          <th> Lost </th>
+            {% for x in loss %}
+            <td>{{x.Lost}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+{% endblock %}
